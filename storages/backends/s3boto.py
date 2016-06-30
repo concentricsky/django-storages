@@ -515,4 +515,4 @@ class S3BotoStorage(Storage):
         return super(S3BotoStorage, self).get_available_name(name, max_length)
 
     def path(self, name):
-        return self._normalize_name(name)
+        return self.url(name)
