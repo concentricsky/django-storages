@@ -513,3 +513,6 @@ class S3BotoStorage(Storage):
             name = self._clean_name(name)
             return name
         return super(S3BotoStorage, self).get_available_name(name, max_length)
+
+    def path(self, name):
+        return self._normalize_name(name)
